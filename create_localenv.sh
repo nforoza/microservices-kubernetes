@@ -14,5 +14,5 @@ pip install -r ./requirements.txt
 # Step 4: Install hadolint
 cd ~
 wget https://github.com/hadolint/hadolint/releases/download/v1.22.1/hadolint-Linux-x86_64
-alias hadolint='~/hadolint-Linux-x86_64'
-
+mv hadolint-Linux-x86_64 hadolint
+alias hadolint='~/hadolint'
