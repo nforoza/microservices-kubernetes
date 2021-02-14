@@ -1,0 +1,25 @@
+noroza@LAPTOP ~
+$ bash run_kubernetes.sh
+Flag --generator has been deprecated, has no effect and will be removed in the f
+uture.
+pod/predictor created
+NAME        READY   STATUS              RESTARTS   AGE
+predictor   0/1     ContainerCreating   0          0s
+error: unable to forward port because pod is not running. Current status=Pending
+
+noroza@LAPTOP ~
+$ kubectl get pods
+NAME        READY   STATUS    RESTARTS   AGE
+predictor   1/1     Running   0          2m46s
+
+noroza@LAPTOP ~
+$ bash run_kubernetes.sh
+Flag --generator has been deprecated, has no effect and will be removed in the f
+uture.
+Error from server (AlreadyExists): pods "predictor" already exists
+NAME        READY   STATUS    RESTARTS   AGE
+predictor   1/1     Running   0          3m
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+
