@@ -14,7 +14,15 @@ A Makefile which defines the set of tasks to be executed for this project instal
 * `Dockerfile`
 Docker container definition for running the house price predictor service.
 
-* `requirements.txt` python libraries dependencies.
+* `requirements.txt` Python libraries dependencies.
+
+* `Bash Scripts`
+    - `create_localenv.sh`: setup a python virtual enviroment and install hadolint
+
+    - `make_prediction.sh`: runs a post request to teest the predictor service.
+    - `run_docker.sh`: docker commands to build and run the predictor stand alone container
+    - `run_kuberenets.sh`: kubectl commands to set-up and run the kubernetes predictor service
+    - `upload_docker.sh`: upload the container image to Docker Hub account.
 
 ## Setup the Environment
 
@@ -22,6 +30,7 @@ Pre requisites
 
 * [Python](https://www.python.org/)
 * [Docker](https://docs.docker.com/)
+* [Docker Hub account](https://hub.docker.com/)
 * [Kubernetes](https://kubernetes.io/docs/tasks/tools/)
 * [minikube](https://minikube.sigs.k8s.io/docs/start/)
 * [hadolint](https://github.com/hadolint/hadolint)
@@ -43,9 +52,10 @@ To install the necessary dependencies run:
     >`./run_docker.sh`
 3. Run in Kubernetes:  
     >`./run_kubernetes.sh`
-### Kubernetes Steps
 
 ## Setup and Configure Docker locally
+
+Follow one of the official installation steps:
 
 [Linux Distributions](https://docs.docker.com/engine/install/)
     
@@ -53,6 +63,7 @@ To install the necessary dependencies run:
      
 [macOS](https://docs.docker.com/docker-for-mac/install/)
 
+### Kubernetes Steps
 
 * Setup and Configure Kubernetes locally
 
