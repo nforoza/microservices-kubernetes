@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![noforza](https://circleci.com/gh/nforoza/microservices-kubernetes.svg?style=svg)](https://github.com/nforoza/microservices-kubernetes)
 
 ## Project Overview
 
