@@ -1,11 +1,36 @@
 [![noforza](https://circleci.com/gh/nforoza/microservices-kubernetes.svg?style=svg)](https://github.com/nforoza/microservices-kubernetes)
 
-## Project Overview
+![Python](https://img.shields.io/badge/python-v3.7+-blue.svg)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+![](https://img.shields.io/badge/OS-Linux%20%7CmacOS-blue)
 
-In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
+## Machine Learning Microservice API with Kubernetes
 
-You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
+This project contains a machine learning model that has been trained to predict housing prices in Boston according to several features and it shows how to operationalize a Python flask app—in serves out predictions (inference) about housing prices through API calls. 
 
+This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
+
+## Installation
+1. Setup the environment pre requisites:
+
+* [Python](https://www.python.org/)
+* [Docker](https://docs.docker.com/)
+* [Docker Hub account](https://hub.docker.com/)
+* [Kubernetes](https://kubernetes.io/docs/tasks/tools/)
+* [minikube](https://minikube.sigs.k8s.io/docs/start/)
+
+2. On your bash console run
+    >`make`
+    
+    >`make install`
+## Usage
+
+1. Standalone:  
+    >`python app.py`
+2. Run in Docker:  
+    >`./run_docker.sh`
+3. Run in Kubernetes:  
+    >`./run_kubernetes.sh`
 ## Project files
 
 * `Makefile`
@@ -24,49 +49,9 @@ Docker container definition for running the house price predictor service.
     - `run_kuberenets.sh`: kubectl commands to set-up and run the kubernetes predictor service
     - `upload_docker.sh`: upload the container image to Docker Hub account.
 
-## Setup the Environment
+## Resources
+### Dataset
+* You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing).
+## License
 
-Pre requisites
-
-* [Python](https://www.python.org/)
-* [Docker](https://docs.docker.com/)
-* [Docker Hub account](https://hub.docker.com/)
-* [Kubernetes](https://kubernetes.io/docs/tasks/tools/)
-* [minikube](https://minikube.sigs.k8s.io/docs/start/)
-* [hadolint](https://github.com/hadolint/hadolint)
-
-### Create a virtualenv and activate it
-##
->`python -m venv .devops`
-
->`source  ./.devops/bin/activate`
-
-To install the necessary dependencies run:
-
->`make install`
-    
-### Running `app.py`
-1. Standalone:  
-    >`python app.py`
-2. Run in Docker:  
-    >`./run_docker.sh`
-3. Run in Kubernetes:  
-    >`./run_kubernetes.sh`
-
-## Setup and Configure Docker locally
-
-Follow one of the official installation steps:
-
-[Linux Distributions](https://docs.docker.com/engine/install/)
-    
-[Windows](https://docs.docker.com/docker-for-windows/install/)
-     
-[macOS](https://docs.docker.com/docker-for-mac/install/)
-
-### Kubernetes Steps
-
-* Setup and Configure Kubernetes locally
-
-* Create Flask app in Container
-
-* Run via kubectl
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
