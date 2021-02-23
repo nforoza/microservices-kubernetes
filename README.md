@@ -21,7 +21,7 @@ This project could be extended to any pre-trained machine learning model, such a
 
 2. On your bash console run
     >`make`
-    
+
     >`make install`
 ## Usage
 
@@ -29,7 +29,9 @@ This project could be extended to any pre-trained machine learning model, such a
     >`python app.py`
 2. Run in Docker:  
     >`./run_docker.sh`
-3. Run in Kubernetes:  
+3. Run in Kubernetes:
+    >`minikube start`  
+    
     >`./run_kubernetes.sh`
 ## Project files
 

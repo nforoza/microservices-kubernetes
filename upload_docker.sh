@@ -10,8 +10,8 @@ dockerpath="nforoza/predictor"
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-docker login --username=nforoza --email=nahuel.oroza@gmail.com
-docker tag 5de0218e3a01 nforoza/predictor:latest
+docker login
+docker tag predictor nforoza/predictor:latest
 
 # Step 3:
 # Push image to a docker repository
